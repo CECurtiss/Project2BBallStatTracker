@@ -1,0 +1,29 @@
+{
+  "name": "project2bballstattracker",
+  "version": "1.0.0",
+  "description": "Statistics Tracker for a Basketball Team",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CECurtiss/Project2BBallStatTracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CECurtiss/Project2BBallStatTracker/issues"
+  },
+  "homepage": "https://github.com/CECurtiss/Project2BBallStatTracker#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.20",
+    "seed": "^0.4.4",
+    "sequelize": "^6.27.0"
+  }
+}
