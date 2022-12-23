@@ -13,6 +13,10 @@ Game.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        date: {
+            type: DataTypes.DATE,
+            allowNull: false,
+        },
         season: {
             type: DataTypes.INTEGER,
             allowNull: false,
@@ -25,14 +29,43 @@ Game.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        teamPoints: {
+        homeScore: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        oppPoints: {
+        awayScore: {
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        fouls: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        turnovers: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        rebounds: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        rebounds: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        steals: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        blocks: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        assists: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+
     },
     {
         sequelize,
