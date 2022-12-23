@@ -21,6 +21,13 @@ Player.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        game_Id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'game',
+                key: 'id',
+            },
+        },
         points: {
             type: DataTypes.INTEGER,
             allowNull: false,
