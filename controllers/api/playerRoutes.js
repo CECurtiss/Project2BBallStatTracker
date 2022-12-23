@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { Project } = require('../..//models/player');
+const { Player } = require('../..//models/player');
 
 router.post('/', async (req, res) => {
     try {
-        const newProject = await Project.create({
+        const newPlayer = await Player.create({
          ...req.body,
          user_id: req.session.user_id,
         });
 
-        res.status(200).json(newProject);
+        res.status(200).json(newPlayer);
       } catch (err) {
         res.status(400).json(err);
       }
@@ -16,19 +16,19 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const projectData = await Project.destroy({
+        const playerData = await Player.destroy({
             where: {
              id: req.params.id,
              user_id: req.session.user_id,
             },
         });
 
-        if (!projectData) {
-            res.status(404).json({ message: 'Project not found'});
+        if (!playerData) {
+            res.status(404).json({ message: 'Player not found'});
             return;
         }
         
-        res.status(200).json(projectData);
+        res.status(200).json(playerData);
     }    catch (err) {
         res.status(500).json(err);
     }
