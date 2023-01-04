@@ -1,4 +1,4 @@
-const { player } = require('../models');
+const { playerBio } = require('../models');
 
 const playerData = [
     {
