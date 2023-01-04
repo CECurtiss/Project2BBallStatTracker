@@ -1,4 +1,4 @@
-const Player = require('./player');
+const Player = require('./playerstats');
 const Game = require('./game');
 const Playerbio = require('./playerbio');
 
