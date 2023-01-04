@@ -6,7 +6,7 @@ Player.hasMany(Game, {
     foreignKey: 'game_id'
 });
 
-Game.belongsToMany(Player, {
+Game.belongsTo(Player, {
     foreignKey: 'game_id',
 })
 
