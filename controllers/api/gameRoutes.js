@@ -7,16 +7,20 @@ router.get('/', (req, res) => {
     });
   });
   
-  router.get('/:id', (req, res) => {
-    Game.findOne(
+  router.get('/:id', async (req, res) => {
+    try {
+      const findGameData = await Game.findByPk(
       {
         where: { 
           id: req.json.id 
         },
       }
-    ).then((gameData) => {
-      res.json(gameData);
-    });
+    )
+    const gameData = findGameData.get({ plain: true });
+      res.render('playerstats', { gameData})
+    } catch (err) {
+      res.status(500).json(err)
+    }
   });
 
 router.post('/', async (req, res) => {
