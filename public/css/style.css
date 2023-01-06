@@ -1,0 +1,9 @@
+.main-body {
+    font-size: 50px;
+    border: 10px solid rgb(222, 245, 222);
+    padding-bottom: 50px 10px;
+    margin-left: 50px;
+    display: inline-block;
+    background-color:rgb(222, 245, 222);
+    color:rgb(72, 47, 13);
+}
