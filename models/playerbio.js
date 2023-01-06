@@ -10,7 +10,7 @@ Playerbio.init(
         player_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'player',
+                model: 'playerstats',
                 key: 'id',
             }
         },
@@ -27,7 +27,7 @@ Playerbio.init(
             allowNull: false,
         },
         height: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         weight: {
@@ -43,8 +43,8 @@ Playerbio.init(
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        underscored: true,
-        modelName: 'players'
+        underscored: false,
+        modelName: 'playerbio'
     }
 );
 

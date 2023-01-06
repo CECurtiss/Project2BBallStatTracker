@@ -1,21 +1,22 @@
-const Player = require('./playerstats');
+const PlayerStats = require('./playerstats');
 const Game = require('./game');
 const Playerbio = require('./playerbio');
+const User = require('./User')
 
-Player.hasMany(Game, {
+PlayerStats.hasMany(Game, {
     foreignKey: 'game_id'
 });
 
-Game.belongsTo(Player, {
+Game.belongsTo(PlayerStats, {
     foreignKey: 'game_id',
 })
 
-Playerbio.belongsTo(Player, {
+Playerbio.belongsTo(PlayerStats, {
     foreignKey: 'player_id',
 })
 
-Player.hasOne(Playerbio, {
+PlayerStats.hasOne(Playerbio, {
     foreignKey: 'player_id',
 })
 
-module.exports = { Player, Game };
+module.exports = { PlayerStats, Game, User, Playerbio };
