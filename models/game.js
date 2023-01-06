@@ -20,12 +20,13 @@ Game.init(
         season: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            default: 2022,
         },
-        opponent: {
+        homeTeam: {
             type: DataTypes.STRING,
             allowNull: false,
         },
-        result: {
+        awayTeam: {
             type: DataTypes.STRING,
             allowNull: false,
         },
@@ -71,7 +72,7 @@ Game.init(
         sequelize,
         timestamps: false,
         freezeTableName: true,
-        underscored: true,
+        underscored: false,
         modelName: "game"
     }
 );
