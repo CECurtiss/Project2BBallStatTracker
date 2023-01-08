@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const Player = require('../../models/playerstats');
+const PlayerStats = require('../../models/playerstats');
 
 router.get('/', async (req,res) => {
     try {
-        const allPlayerStats = await Player.findAll()
+        const allPlayerStats = await PlayerStats.findAll()
         res.status(200).json(allPlayerStats)
     } catch (err) {
         res.status(500).json(err)
@@ -12,7 +12,7 @@ router.get('/', async (req,res) => {
 
 router.post('/', async (req, res) => {
     try {
-        const newPlayer = await Player.create({
+        const newPlayer = await PlayerStats.create({
          ...req.body,
          user_id: req.session.user_id,
         });
@@ -25,7 +25,7 @@ router.post('/', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
     try {
-        const playerData = await Player.destroy({
+        const playerData = await PlayerStats.destroy({
             where: {
              id: req.params.id,
              user_id: req.session.user_id,
