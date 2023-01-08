@@ -50,10 +50,6 @@ Game.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        rebounds: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         steals: {
             type: DataTypes.INTEGER,
             allowNull: false,

@@ -29,7 +29,7 @@ router.post("/", async (req, res) => {
 router.delete("/:id", (req, res) => {
   Playerbio.destroy({
     where: {
-      isbn: req.params.id,
+      id: req.params.id,
     },
   })
     .then((deletedPlayerbio) => {
