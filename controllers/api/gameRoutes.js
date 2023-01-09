@@ -2,20 +2,17 @@ const router = require("express").Router();
 const Game = require("../../models/game");
 
 router.get("/", async (req, res) => {
- 
   const allGames = await Game.findAll().catch((err) => {
-    res.json(err)
-  })
-  const games = allGames.map((game) => game.get({ plain: true }))
- 
-    res.render('homepage', { games })
-  })
+    res.json(err);
+  });
+  const games = allGames.map((game) => game.get({ plain: true }));
+
+  res.render("homepage", { games });
+});
 
 router.get("/:id", async (req, res) => {
   try {
-    const findGameData = await Game.findByPk(req.params.id, {
-      
-    });
+    const findGameData = await Game.findByPk(req.params.id, {});
     // res.status(200).json(findGameData)
     const gameData = findGameData.get({ plain: true });
     res.render("playerstats", { gameData });
