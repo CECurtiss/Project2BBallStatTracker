@@ -14,7 +14,7 @@ const login = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/homepage');
+            document.location.replace('/api/gamestats');
         } else {
             alert('Failed to login');
         }
