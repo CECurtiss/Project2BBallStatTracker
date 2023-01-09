@@ -6,3 +6,25 @@
   <a href="/login">login</a>
   {{/if}}
  </nav>
+
+<div>
+{{#each games as |game|}}
+<table style="width:100%">
+  <tr>
+    <td>{{game.date}}</td>
+    <td>{{game.season}}</td>
+    <td>{{game.homeTeam}}</td>
+    <td>{{game.awayTeam}}</td>
+    <td>{{game.homeScore}}</td>
+    <td>{{game.awayScore}}</td>
+    <td>{{game.fouls}}</td>
+    <td>{{game.turnovers}}</td>
+    <td>{{game.rebounds}}</td>
+    <td>{{game.steals}}</td>
+    <td>{{game.blocks}}</td>
+    <td>{{game.assists}}</td>
+  </tr>
+</table>
+{{/each}}
+</div>
+

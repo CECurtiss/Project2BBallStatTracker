@@ -14,7 +14,6 @@ router.post('/', async (req, res) => {
     try {
         const newPlayer = await PlayerStats.create({
          ...req.body,
-         user_id: req.session.user_id,
         });
 
         res.status(200).json(newPlayer);
@@ -28,7 +27,6 @@ router.delete('/:id', async (req, res) => {
         const playerData = await PlayerStats.destroy({
             where: {
              id: req.params.id,
-             user_id: req.session.user_id,
             },
         });
 
