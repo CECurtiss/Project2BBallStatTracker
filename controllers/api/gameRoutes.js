@@ -7,8 +7,7 @@ router.get("/", async (req, res) => {
     res.json(err)
   })
   const games = allGames.map((game) => game.get({ plain: true }))
-  //  res.status(200).json(allGames)
-
+ 
     res.render('homepage', { games })
   })
 

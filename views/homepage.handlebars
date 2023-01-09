@@ -11,7 +11,9 @@
 {{#each games as |game|}}
 <table>
   <tr>
-    <td>{{game.date}}</td>
+    <td>
+      <a id= "gameplayers" href = "http://localhost:3001/api/gamestats/{{game.id}}">{{game.date}}</a>
+    </td>
     <td>{{game.season}}</td>
     <td>{{game.homeTeam}}</td>
     <td>{{game.awayTeam}}</td>
@@ -27,4 +29,6 @@
 </table>
 {{/each}}
 </div>
+
+<script src="js/homepage.js"></script>
 

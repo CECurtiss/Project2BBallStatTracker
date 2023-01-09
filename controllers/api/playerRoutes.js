@@ -10,6 +10,19 @@ router.get('/', async (req,res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        const gamePlayers = await PlayerStats.findAll({
+            where: {
+                gameId: req.params.id,
+            }
+        }).
+        res.status(200).json(gamePlayers)
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
+
 router.post('/', async (req, res) => {
     try {
         const newPlayer = await PlayerStats.create({
