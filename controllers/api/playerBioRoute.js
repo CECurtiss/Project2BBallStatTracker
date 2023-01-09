@@ -22,10 +22,17 @@ router.get("/:id", async (req, res) => {
         }
       ]
     })
+    const allGames = await PlayerStats.findAll().catch((err) => {
+      res.json(err);
+    });
+    const games = allGames.map((game) => game.get({ plain: true }));
+  
+   
     const player = getPlayer.get({ plain: true })
-    res.render('singleplayer', { player })
+    res.render('singleplayer', { player, games })
+  });
     
-  })
+
 
 router.post("/", async (req, res) => {
   try {
