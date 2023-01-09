@@ -1,14 +1,17 @@
-{{#each allGamePlayers as |aGPlayers|}}
-<table style="width:100%">
+<div>
+{{#each singleGamePlayers as |playerstats|}}
+
+<table>
   <tr>
-    <td>{{{player.firstName}}}</td>
-    <td>{{{player.lastName}}}</td>
-    <td>{{{player.points}}}</td>
-    <td>{{{player.rebounds}}}</td>
-    <td>{{{player.steals}}}</td>
-    <td>{{{player.turnovers}}}</td>
-    <td>{{{player.blocks}}}</td>
-    <td>{{{player.personalFouls}}}</td>
+    <td>{{playerstats.firstName}}</td>
+    <td>{{playerstats.lastName}}</td>
+    <td>{{playerstats.points}}</td>
+    <td>{{playerstats.rebounds}}</td>
+    <td>{{playerstats.steals}}</td>
+    <td>{{playerstats.turnovers}}</td>
+    <td>{{playerstats.blocks}}</td>
+    <td>{{playerstats.personalFouls}}</td>
   </tr>
 </table>
 {{/each}}
+</div>
