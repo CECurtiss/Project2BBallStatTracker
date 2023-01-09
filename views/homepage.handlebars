@@ -5,11 +5,25 @@
   {{else}}
   <a href="/login">login</a>
   {{/if}}
- </nav>
+</nav>
 
 <div>
 {{#each games as |game|}}
 <table>
+  <tr>
+    <th>Date</th>
+    <th>Season</th>
+    <th>Home Team</th>
+    <th>Away Team</th>
+    <th>Home Score</th>
+    <th>Away Score</th>
+    <th>Fouls</th>
+    <th>Turnovers</th>
+    <th>Rebounds</th>
+    <th>Steals</th>
+    <th>Blocks</th>
+    <th>Assists</th>
+  </tr>
   <tr>
     <td>
       <a id= "gameplayers" href = "http://localhost:3001/api/playerstats/{{game.id}}">{{game.date}}</a>

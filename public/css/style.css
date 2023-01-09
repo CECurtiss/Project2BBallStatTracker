@@ -13,3 +13,14 @@ body {
     background-color:rgb(222, 245, 222);
     color:rgb(72, 47, 13);
 }
+
+table, th, td {
+    border:1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: center;
+    background-color:rgb(222, 245, 222);
+    color:rgb(72, 47, 13);
+    font-size: 14px;
+}
+
