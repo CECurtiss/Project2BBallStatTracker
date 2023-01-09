@@ -12,10 +12,7 @@ router.get('/', async (req,res) => {
 
 router.get('/:id', async (req, res) => {
     try {
-        const gamePlayers = await PlayerStats.findAll({
-            where: {
-                gameId: req.params.id,
-            }
+        const gamePlayers = await PlayerStats.findAll(req.params.gameId,{
         })
         const allGamePlayers = gamePlayers.map((aGPlayers) => aGPlayers.get({ plain: true }))
  
