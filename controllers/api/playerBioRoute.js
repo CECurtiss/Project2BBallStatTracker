@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const Playerbio  = require("../../models/playerbio");
-const PlayerStats = require("../../models/playerStats")
+const PlayerStats = require("../../models/playerstats")
 
 router.get("/:id", async (req, res) => {
   const getPlayer = await Playerbio.findOne({
