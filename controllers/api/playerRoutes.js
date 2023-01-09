@@ -16,8 +16,12 @@ router.get('/:id', async (req, res) => {
             where: {
                 gameId: req.params.id,
             }
-        }).
-        res.status(200).json(gamePlayers)
+        })
+        const allGamePlayers = gamePlayers.map((aGPlayers) => aGPlayers.get({ plain: true }))
+ 
+    res.render('homepage', { allGamePlayers })
+
+      
     } catch(err) {
         res.status(500).json(err)
     }
