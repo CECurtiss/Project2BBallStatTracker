@@ -10,11 +10,27 @@ router.get('/', async (req,res) => {
     }
 });
 
+router.get('/:id', async (req, res) => {
+    try {
+        const gamePlayers = await PlayerStats.findAll({
+            where: {
+                gameId: req.params.id,
+            }
+        })
+        const allGamePlayers = gamePlayers.map((aGPlayers) => aGPlayers.get({ plain: true }))
+ 
+    res.render('playerstats', { allGamePlayers })
+
+      
+    } catch(err) {
+        res.status(500).json(err)
+    }
+})
+
 router.post('/', async (req, res) => {
     try {
         const newPlayer = await PlayerStats.create({
          ...req.body,
-         user_id: req.session.user_id,
         });
 
         res.status(200).json(newPlayer);
@@ -28,7 +44,6 @@ router.delete('/:id', async (req, res) => {
         const playerData = await PlayerStats.destroy({
             where: {
              id: req.params.id,
-             user_id: req.session.user_id,
             },
         });
 

@@ -2,19 +2,21 @@ const router = require("express").Router();
 const Game = require("../../models/game");
 
 router.get("/", async (req, res) => {
-  try {
-  const allGames = await Game.findAll()
-   
-    res.render('homepage')
-  } catch {
-    res.status(500).json(err);
-}});
+ 
+  const allGames = await Game.findAll().catch((err) => {
+    res.json(err)
+  })
+  const games = allGames.map((game) => game.get({ plain: true }))
+ 
+    res.render('homepage', { games })
+  })
 
 router.get("/:id", async (req, res) => {
   try {
     const findGameData = await Game.findByPk(req.params.id, {
       
     });
+    // res.status(200).json(findGameData)
     const gameData = findGameData.get({ plain: true });
     res.render("playerstats", { gameData });
   } catch (err) {
@@ -40,7 +42,6 @@ router.delete("/:id", async (req, res) => {
     const gameData = await Game.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 
