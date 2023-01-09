@@ -2,7 +2,6 @@
   <tr>
     <th>Name</th>
     <th>Position</th>
-    <th>Points</th>
     <th>Age</th>
     <th>Height</th>
     <th>Weight</th>
@@ -11,7 +10,6 @@
   <tr>
     <td>{{player.name}}</td>
     <td>{{player.position}}</td>
-    <td>{{player.points}}</td>
     <td>{{player.age}}</td>
     <td>{{player.height}}</td>
     <td>{{player.weight}}</td>
@@ -20,6 +18,7 @@
 </table>
 
 <div>
+  {{#each games as |game|}}
   <table>
     <tr>
       <th>Points</th>
@@ -40,4 +39,5 @@
       <td>{{playerstats.personalFouls}}</td>
     </tr>
   </table>
+  {{/each}}
 </div>
