@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
         })
         const allGamePlayers = gamePlayers.map((aGPlayers) => aGPlayers.get({ plain: true }))
  
-    res.render('homepage', { allGamePlayers })
+    res.render('playerstats', { allGamePlayers })
 
       
     } catch(err) {
