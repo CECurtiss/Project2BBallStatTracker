@@ -13,7 +13,7 @@ const login = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/api/gamestats');
+            document.location.replace('/');
         } else {
             alert('Failed to login');
         }
