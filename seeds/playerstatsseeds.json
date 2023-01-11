@@ -2,7 +2,7 @@
     {
         "firstName": "Lebron",
         "lastName": "James", 
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 25,
         "rebounds": 10,
         "assists": 10,
@@ -14,7 +14,7 @@
     {
         "firstName": "Anthony",
         "lastName": "Davis",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 30,
         "rebounds": 12,
         "assists": 5,
@@ -26,7 +26,7 @@
     {
         "firstName": "James",
         "lastName": "Harden",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 35,
         "rebounds": 5,
         "assists": 10,
@@ -38,7 +38,7 @@
     {
         "firstName": "Kevin",
         "lastName": "Durant",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 40,
         "rebounds": 8,
         "assists": 5,
@@ -50,7 +50,7 @@
     {
         "firstName": "Kyrie",
         "lastName": "Irving",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 30,
         "rebounds": 5,
         "assists": 10,
@@ -62,7 +62,7 @@
     {
         "firstName": "Stephen",
         "lastName": "Curry",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 35,
         "rebounds": 5,
         "assists": 10,
@@ -74,7 +74,7 @@
     {
         "firstName": "Klay",
         "lastName": "Thompson",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 30,
         "rebounds": 5,
         "assists": 5,
@@ -86,7 +86,7 @@
     {
         "firstName": "Draymond",
         "lastName": "Green",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 15,
         "rebounds": 10,
         "assists": 10,
@@ -98,7 +98,7 @@
     {
         "firstName": "kawhi",
         "lastName": "Leonard",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 30,
         "rebounds": 10,
         "assists": 5,
@@ -110,7 +110,7 @@
     {
         "firstName": "Paul",
         "lastName": "George",
-        "game_Id": 2,
+        "game_Id": 6,
         "points": 30,
         "rebounds": 10,
         "assists": 5,

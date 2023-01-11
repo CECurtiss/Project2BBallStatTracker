@@ -2,29 +2,9 @@ const router = require("express").Router();
 const PlayerStats = require("../../models/playerstats");
 
 router.get("/", async (req, res) => {
-  const allPlayerStats = await PlayerStats.findAll({ 
-    where: {
-      id: req.params.id,
-    }
-  })
-  const singleGamePlayers = allPlayerStats.map((gamePlayers) =>
-    gamePlayers.get({ plain: true })
-  );
-  res.render("playerstats", { singleGamePlayers });
-});
-
-router.get("/:id", async (req, res) => {
-  try {
-    const gamePlayers = await PlayerStats.findAll(req.params.gameId, {});
-    const allGamePlayers = gamePlayers.map((aGPlayers) =>
-      aGPlayers.get({ plain: true })
-    );
-
-    res.render("playerstats", { allGamePlayers });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
+  const allPlayerStats = await PlayerStats.findAll()
+  res.status(200).json(allPlayerStats)
+})
 
 router.post("/", async (req, res) => {
   try {
