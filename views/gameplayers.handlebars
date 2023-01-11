@@ -1,13 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Track my Stats!</title>
-  <link rel="stylesheet" href="css/jass.css">
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-{{{ body}}}
- </body>
-</html>
+<div>
+{{#each allGamePlayers as |playerstats|}}
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Points</th>
+    <th>Rebounds</th>
+    <th>Steals</th>
+    <th>Turnovers</th>
+    <th>Blocks</th>
+    <th>Personal Fouls</th>
+  </tr>
+  <tr>
+    <td>{{playerstats.firstName}}</td>
+    <td>{{playerstats.lastName}}</td>
+    <td>{{playerstats.points}}</td>
+    <td>{{playerstats.rebounds}}</td>
+    <td>{{playerstats.steals}}</td>
+    <td>{{playerstats.turnovers}}</td>
+    <td>{{playerstats.blocks}}</td>
+    <td>{{playerstats.personalFouls}}</td>
+  </tr>
+</table>
+{{/each}}
+</div>

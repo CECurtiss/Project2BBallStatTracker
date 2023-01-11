@@ -5,9 +5,7 @@ const Game = require("../../models/game");
 router.get("/:id", async (req, res) => {
   try {
     const findGameData = await Game.findByPk(req.params.id, {});
-    // res.status(200).json(findGameData)
-    const gameData = findGameData.get({ plain: true });
-    res.render("playerstats", { gameData });
+    res.status(200).json(findGameData)
   } catch (err) {
     res.status(500).json(err);
   }

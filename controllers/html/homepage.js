@@ -9,6 +9,7 @@ router.get("/", withAuth, async (req, res) => {
     user: { user_id: req.session.user_id, logged_in: req.session.logged_in },
   });
 });
+
 router.get("/login", (req, res) => {
   res.render("login");
 });
