@@ -4,11 +4,11 @@ const Playerbio = require('./playerbio');
 const User = require('./User')
 
 PlayerStats.hasMany(Game, {
-    foreignKey: 'game_id'
+    foreignKey: 'gameId'
 });
 
 Game.belongsTo(PlayerStats, {
-    foreignKey: 'game_id',
+    foreignKey: 'gameId',
 })
 
 Playerbio.belongsTo(PlayerStats, {

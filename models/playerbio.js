@@ -7,13 +7,13 @@ class Playerbio extends Model {
 
 Playerbio.init(
     {
-        player_id: {
+        id: {
             type: DataTypes.INTEGER,
-            references: {
-                model: 'playerstats',
-                key: 'id',
-            }
+            allowNull: false,
+            primaryKey: true,
+            autoIncrement:true,
         },
+       
         name: {
            type: DataTypes.STRING,
            allowNull: false,

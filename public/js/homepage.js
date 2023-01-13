@@ -14,4 +14,4 @@ console.log('hello')
     }
 }
 
-document.querySelector('#gameplayers').addEventListener('click', gamePlayersHandler)
+document.querySelectorAll('.gameplayers').forEach(el=>el.addEventListener('click', gamePlayersHandler))
