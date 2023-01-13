@@ -1,6 +1,5 @@
 const gamePlayersHandler = async (event) => {
     event.preventDefault();
-console.log('hello')
     const response = await fetch(`/api/playerstats`, {
         method: 'POST',
         body: JSON.stringify({ gameId, firstname, lastName, points, rebounds, assists, steals, turnovers, blocks, personalFouls }),

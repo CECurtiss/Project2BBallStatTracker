@@ -1,3 +1,5 @@
+{{> createplayer }}
+
 <table>
   <tr>
     <th>Name</th>
@@ -8,17 +10,17 @@
     <th>College</th>
   </tr>
   <tr>
-    <td>{{player.name}}</td>
-    <td>{{player.position}}</td>
-    <td>{{player.age}}</td>
-    <td>{{player.height}}</td>
-    <td>{{player.weight}}</td>
-    <td>{{player.college}}</td>
+    <td>{{playerbio.name}}</td>
+    <td>{{playerbio.position}}</td>
+    <td>{{playerbio.age}}</td>
+    <td>{{playerbio.height}}</td>
+    <td>{{playerbio.weight}}</td>
+    <td>{{playerbio.college}}</td>
   </tr>
 </table>
 
 <div>
-  {{#each games as |game|}}
+  {{#each allGamePlayers as |playerstats|}}
   <table>
     <tr>
       <th>Points</th>
