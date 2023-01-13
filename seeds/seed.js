@@ -18,12 +18,12 @@ const seedAll = async () => {
     await sequelize.sync({ force: true });
 
     await User.bulkCreate(newUserData)
-
-    await PlayerStats.bulkCreate(playerStatSeedData)
-
+    
     await Playerbio.bulkCreate(playerBioSeedData)
-
+    
     await Game.bulkCreate(gameSeedData)
+    
+    await PlayerStats.bulkCreate(playerStatSeedData)
     console.log('Database synced!');
     process.exit(0);
 };

@@ -13,6 +13,13 @@ PlayerStats.init(
             primaryKey: true,
             autoIncrement:true,
         },
+        player_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'playerbio',
+                key: 'id',
+            }
+        },
         firstName: {
             type: DataTypes.STRING,
             allowNull: false,
