@@ -9,7 +9,7 @@ router.get("/:id", withAuth, async (req, res) => {
     const gamePlayers = await PlayerStats.findAll(
       {
         where: {
-          firstName: req.params.id,
+          player_id: req.params.id,
         },
       }
           );
