@@ -1,6 +1,5 @@
 const gamePlayersHandler = async (event) => {
     event.preventDefault();
-console.log('hello')
     const response = await fetch(`/api/playerstats`, {
         method: 'POST',
         body: JSON.stringify({ gameId, firstname, lastName, points, rebounds, assists, steals, turnovers, blocks, personalFouls }),
@@ -14,4 +13,4 @@ console.log('hello')
     }
 }
 
-document.querySelectorAll('.gameplayers').forEach(el=>el.addEventListener('click', gamePlayersHandler))
+document.querySelectorAll('.gameplayers').addEventListener('click', gamePlayersHandler)

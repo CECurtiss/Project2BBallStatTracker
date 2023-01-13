@@ -1,10 +1,11 @@
+{{> addplayer }}
+
 <div>
 {{#each allGamePlayers as |playerstats|}}
 
 <table>
   <tr>
-    <th>First Name</th>
-    <th>Last Name</th>
+    <th>Name</th>
     <th>Points</th>
     <th>Rebounds</th>
     <th>Steals</th>
@@ -14,7 +15,7 @@
   </tr>
   <tr>
     <td>
-      <a id= "singleplayer" href = "/singleplayer/{{playerstats.firstName}}">{{playerstats.firstName}} {{playerstats.lastName}}</a>
+      <a id= "singleplayer" href = "/singleplayer/{{playerstats.player_id}}">{{playerstats.firstName}} {{playerstats.lastName}}</a>
     </td>
     <td>{{playerstats.points}}</td>
     <td>{{playerstats.rebounds}}</td>
