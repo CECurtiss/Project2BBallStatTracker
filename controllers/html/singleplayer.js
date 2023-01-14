@@ -16,9 +16,11 @@ router.get("/:id", withAuth, async (req, res) => {
   const bioPlayer = await PlayerBio.findOne({
     where: {
       id: req.params.id,
-    }
+    },
+    raw: true
   })
-
+console.log(bioPlayer)
+console.log(allGamePlayers)
   res.render("singleplayer", { bioPlayer,
     allGamePlayers,
     user: { user_id: req.session.user_id, logged_in: req.session.logged_in },
