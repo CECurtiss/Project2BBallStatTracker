@@ -24,3 +24,12 @@ table, th, td {
     font-size: 14px;
 }
 
+.playerimgs {
+    display: block;
+    float:right;
+    height: 50px;
+}
+
+form label {
+    width: 200px;
+}

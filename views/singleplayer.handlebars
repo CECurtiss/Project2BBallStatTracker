@@ -10,14 +10,19 @@
     <th>College</th>
   </tr>
   <tr>
-    <td>{{playerbio.name}}</td>
-    <td>{{playerbio.position}}</td>
-    <td>{{playerbio.age}}</td>
-    <td>{{playerbio.height}}</td>
-    <td>{{playerbio.weight}}</td>
-    <td>{{playerbio.college}}</td>
+    <td>{{bioPlayer.name}}</td>
+    <td>{{bioPlayer.position}}</td>
+    <td>{{bioPlayer.age}}</td>
+    <td>{{bioPlayer.height}}</td>
+    <td>{{bioPlayer.weight}}</td>
+    <td>{{bioPlayer.college}}</td>
   </tr>
 </table>
+
+<div class="playerimgs">
+  <img src="/images/{{bioPlayer.id}}.webp" width="350" height="250">
+{{!-- all images from nba.com --}}
+</div>
 
 <div>
   {{#each allGamePlayers as |playerstats|}}

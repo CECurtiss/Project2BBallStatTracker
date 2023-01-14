@@ -35,7 +35,7 @@ const signupFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/gameplayers');
+        document.location.replace('/');
       } else {
         alert('Failed to sign up.');
       }
