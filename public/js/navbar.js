@@ -17,3 +17,8 @@ const addNewPlayerStatsBtn = () => {
   document.location.replace('/addplayerstats')
 }
 document.querySelector('#addplayerstatsbtn').addEventListener('click', addNewPlayerStatsBtn )
+
+const allPlayersBtn = () => {
+  document.location.replace('/allplayers')
+}
+document.querySelector('#allplayersbtn').addEventListener('click', allPlayersBtn)
