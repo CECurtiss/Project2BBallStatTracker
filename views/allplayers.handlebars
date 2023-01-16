@@ -1,0 +1,26 @@
+<div>
+  {{#each allPlayers as |playerBio|}}
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Player ID</th>
+        <th>Position</th>
+        <th>Age</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>College</th>
+      </tr>
+      <tr>
+        <td>
+          <a href="/singleplayer/{{playerBio.id}}">{{playerBio.name}}</a>
+        </td>
+        <td>{{playerBio.id}}</td>
+        <td>{{playerBio.position}}</td>
+        <td>{{playerBio.age}}</td>
+        <td>{{playerBio.height}}</td>
+        <td>{{playerBio.weight}}</td>
+        <td>{{playerBio.college}}</td><br />
+      </tr>
+    </table>
+  {{/each}}
+</div>
