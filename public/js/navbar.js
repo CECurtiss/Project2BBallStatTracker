@@ -9,6 +9,6 @@ const goToHomepage = async () => {
   document.querySelector('#addgame').addEventListener('click', addGameBtn )
 
   const createNewPlayerBtn = () => {
-    document.location.replace('/addnewplayer')
+    document.location.replace('/createnewplayer')
 }
 document.querySelector('#createplayer').addEventListener('click', createNewPlayerBtn )
