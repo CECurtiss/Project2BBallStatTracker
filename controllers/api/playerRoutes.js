@@ -9,11 +9,22 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const newPlayer = await PlayerStats.create({
-      ...req.body,
+      player_id: req.body.statsPlayerId,
+      firstName: req.body.statsFirstName,
+      lastName: req.body.statsLastName,
+      gameId: req.body.statsGameId,
+      points: req.body.statsPtScored,
+      rebounds: req.body.statsRebounds,
+      assists: req.body.statsAssists,
+      steals: req.body.statsSteals,
+      turnovers: req.body.statsTurnovers,
+      blocks: req.body.statsBlocks,
+      personalFouls: req.body.statsFouls,
     });
 
     res.status(200).json(newPlayer);
   } catch (err) {
+    console.error(err)
     res.status(400).json(err);
   }
 });
