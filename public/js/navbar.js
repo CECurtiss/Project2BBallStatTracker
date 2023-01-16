@@ -12,3 +12,8 @@ const goToHomepage = async () => {
     document.location.replace('/createnewplayer')
 }
 document.querySelector('#createplayer').addEventListener('click', createNewPlayerBtn )
+
+const addNewPlayerStatsBtn = () => {
+  document.location.replace('/addplayerstats')
+}
+document.querySelector('#addplayerstatsbtn').addEventListener('click', addNewPlayerStatsBtn )
