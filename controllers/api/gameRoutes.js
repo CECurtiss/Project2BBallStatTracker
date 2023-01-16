@@ -14,7 +14,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   try {
     const newGame = await Game.create({
-      date: req.body.date,
+      date: req.body.gdate,
       season: req.body.season,
       homeTeam: req.body.homeTeam,
       awayTeam: req.body.awayTeam,
@@ -31,6 +31,7 @@ router.post("/", async (req, res) => {
 
     res.status(200).json(newGame);
   } catch (err) {
+    console.error(err)
     res.status(500).json(err);
   }
 });
