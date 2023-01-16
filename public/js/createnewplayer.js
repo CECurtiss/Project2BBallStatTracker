@@ -27,7 +27,6 @@ const addNewPlayerBioData = async (event) => {
       }),
       headers: { "Content-Type": "application/json" },
     });
-    console.log(gdate);
     if (response.ok) {
       document.location.replace("/");
     } else {
